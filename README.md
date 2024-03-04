@@ -1,6 +1,6 @@
-- 👋 Hi, I’m @Sikendra2124
+- 👋 Hi, I’m @Sikendra
 - 👀 I’m interested in web development
-- 🌱 I’m currently learning React 
+- 🌱 I’m currently learning React and tailwind
 - 💞️ I’m looking to collaborate on EY
   
 
