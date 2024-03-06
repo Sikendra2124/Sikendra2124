@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Multiple Values</title>
+</head>
+<body>
+<input type="text" id="skillInput" placeholder="Enter a skill">
+<button id="addSkillBtn">Add Skill</button>
+
+<ul id="skillList">
+  <!-- Skills will be added here -->
+</ul>
+<script>
+/ Function to add a skill to the list
+function addSkill() {
+    // Get the input value
+    let skillInput = document.getElementById('skillInput').value.trim();
+    
+    // If the input field is not empty
+    if (skillInput !== '') {
+        let skillList = document.getElementById('skillList');
+        
+        // Check if the skill already exists in the list
+        if (!isSkillExists(skillInput)) {
+            // Create a new list item
+            let li = document.createElement('li');
+            li.textContent = skillInput;
+            
+            // Add the list item to the skill list
+            skillList.appendChild(li);
+        } else {
+            alert('Skill already exists in the list.');
+        }
+        
+        // Clear the input field
+        document.getElementById('skillInput').value = '';
+    }
+}
+
+// Function to check if a skill already exists in the list
+function isSkillExists(skill) {
+    let skills = document.querySelectorAll('#skillList li');
+    for (let i = 0; i < skills.length; i++) {
+        if (skills[i].textContent.toLowerCase() === skill.toLowerCase()) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Event listener for the button click
+document.getElementById('addSkillBtn').addEventListener('click', addSkill);
+</script>
+
+</body>
+</html>
