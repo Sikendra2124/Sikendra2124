@@ -1,0 +1,39 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.fill {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.description {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.urls {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.published,
+.author {
+  margin-top: 10px;
+}
